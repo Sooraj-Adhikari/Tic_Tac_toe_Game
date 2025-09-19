@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar{
+    background-color: rgb(33, 10, 33);
+    color: white;
+    font-size: 2rem;
+    height: 55px;
+      display: flex;
+      align-items: center;
+      padding-left: 22px;
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    height: 24rem;
+    padding-top: 16px;
+    grid-template-columns: repeat(3,10vw);
+}
+
+.box{
+    border: 2px solid black;
+    height: 8rem;
+    font-size: 13vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(248, 236, 248);
+}
+
+.game-info{
+    padding: 0px 34px;
+    font-size: 2rem;
+    
+}
+
+.info{
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    padding-left: 200px;
+    font-weight: bold;
+    color: brown;
+}
+
+.imgbox img{
+   
+    width: 0px;
+    transition: width 1s ease-in-out;
+    margin-left: 124px;
+}
+
+.line{
+    background-color: rgb(225, 21, 243);
+    width: 0;
+    height: 4px;
+  
+transition: width 1s ease-in-out;
+    position: absolute;
+   
+}
+
+/* utility classes */
+
+.bl{
+    border-left: 0;
+}
+
+.br{
+    border-right: 0;
+}
+
+.bt{
+    border-top: 0;
+}
+
+.bb{
+    border-bottom: 0;
+}
+
+/* styling reset button */
+
+#reset{
+    margin: 30px 90px;
+    padding: 4px 19px;
+    font-size: 1rem;
+    background-color: #f3d9f3;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 2px solid black;
+    position: relative;
+    left: 80px;
+    cursor: pointer;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 1130px) {
+     .game-container{
+       flex-wrap: wrap;
+    }
+    
+    .game-info{
+        margin-top: 100px;
+    }
+    .container{
+        grid-template-columns: repeat(3, 18vw);
+       }
+       .line{
+        visibility: hidden;
+       }
+}
+
+@media only screen and (max-width: 800px) {
+   .game-info h1{
+    font-size: 2.9rem;
+    text-align: center;
+    margin-bottom: 19px;
+   }
+#reset{
+   display: block;
+}
+.info{
+    padding: 145px;
+}
+.line{
+    visibility: hidden;
+}
+}
